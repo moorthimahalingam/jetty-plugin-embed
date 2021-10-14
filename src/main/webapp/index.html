@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="http://localhost:8080/auth/js/keycloak.js"></script>
+		<script src="./myLogic.js"></script>		
+	</head>
+	<body onload="initKeycloak()">
+		<div> 
+			<table>
+				<tr>
+					<td id="username">Username</td><td>${user.username}</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<textarea id="ta-token">EMPTY</textarea>
+			<textarea id="ta-refreshtoken">EMPTY</textarea> 
+		</div>
+		
+		<input type="button" value="validAuth" onclick="callAuthEndPoint()" />
+		<input type="button" value="invalidAuth" onclick="validateInvalidToken()" />
+	</body>
+</html>
